@@ -1,11 +1,15 @@
 # TheOpenMusicBox - Project Architecture
 
+<a href="https://www.buymeacoffee.com/rhy6j5cdpq9" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+
 [![License](https://img.shields.io/badge/License-Custom-blue.svg)](LICENSE)
 [![Contract Version](https://img.shields.io/badge/Contracts-v3.1.0-purple.svg)](https://github.com/theopenmusicbox/contracts)
 
 ### 🔧 Technologies
 
 **Backend (RPI):**
+
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?logo=socketdotio&logoColor=white)](https://socket.io/)
@@ -15,6 +19,7 @@
 [![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?logo=pytest&logoColor=white)](https://pytest.org/)
 
 **Frontend (RPI Web UI):**
+
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vuedotjs&logoColor=white)](https://vuejs.org/)
 [![Pinia](https://img.shields.io/badge/Pinia-FFD859?logo=vue.js&logoColor=black)](https://pinia.vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -22,35 +27,38 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 **Mobile App (Flutter):**
+
 [![Flutter](https://img.shields.io/badge/Flutter-3.5+-02569B?logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?logo=dart&logoColor=white)](https://dart.dev/)
 [![Provider](https://img.shields.io/badge/Provider-02569B?logo=flutter&logoColor=white)](https://pub.dev/packages/provider)
 [![Dio](https://img.shields.io/badge/Dio-FF6B6B?logo=dart&logoColor=white)](https://pub.dev/packages/dio)
 
 **Embedded (ESP32):**
+
 [![C++](https://img.shields.io/badge/C++-17-00599C?logo=cplusplus&logoColor=white)](https://isocpp.org/)
 [![Arduino](https://img.shields.io/badge/Arduino-00979D?logo=arduino&logoColor=white)](https://www.arduino.cc/)
 [![PlatformIO](https://img.shields.io/badge/PlatformIO-FF7F00?logo=platformio&logoColor=white)](https://platformio.org/)
 [![ESP-IDF](https://img.shields.io/badge/ESP--IDF-E7352C?logo=espressif&logoColor=white)](https://docs.espressif.com/projects/esp-idf/)
 
 **API & Contracts:**
+
 [![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0-6BA539?logo=openapiinitiative&logoColor=white)](https://www.openapis.org/)
 [![JSON Schema](https://img.shields.io/badge/JSON%20Schema-000000?logo=json&logoColor=white)](https://json-schema.org/)
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?logo=socketdotio&logoColor=white)](https://socket.io/)
 
-**Hardware:**
+**Platforms:**
+
 [![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?logo=raspberrypi&logoColor=white)](https://www.raspberrypi.org/)
 [![ESP32](https://img.shields.io/badge/ESP32--S3-E7352C?logo=espressif&logoColor=white)](https://www.espressif.com/en/products/socs/esp32-s3)
 
 **DevOps & Tools:**
+
 [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)](https://git-scm.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![systemd](https://img.shields.io/badge/systemd-30302F?logo=linux&logoColor=white)](https://systemd.io/)
 
 ---
-
-<a href="https://www.buymeacoffee.com/rhy6j5cdpq9" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 **Version:**
 **Status:** Active Development
@@ -74,65 +82,52 @@
 
 ## 🏗️ System Architecture
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                   Contracts Repository (Shared)              │
-│  ┌────────────────┐  ┌──────────────────────────────────┐    │
-│  │ openapi.yaml   │  │ socketio_contracts.json          │    │
-│  │ (REST API)     │  │ (WebSocket Events)               │    │
-│  └────────────────┘  └──────────────────────────────────┘    │
-│          │                        │                          │
-│    ┌─────┴────────────────────────┴─────┐                    │
-│    │   Code Generation (v3.1.0)         │                    │
-│    └─────┬────────┬────────┬────────────┘                    │
-│          │        │        │                                 │
-└──────────┼────────┼────────┼─────────────────────────────────┘
-           │        │        │
-    ┌──────▼──┐  ┌──▼───┐  ┌─▼───────┐
-    │ Dart    │  │ C++  │  │ Python  │  (+ TypeScript)
-    └──────┬──┘  └─┬────┘  └─┬───────┘
-           │       │         │
-           │       │         │
-           │       │         │
-   ┌───────▼───────┼─────────▼──────────┐────────────────────────
-   │               │                    │
-   │    ┌──────────▼─────────────┐  ┌───▼────────────────────┐
-   │    │ Flutter App (Remote)   │  │ OPTION A: RPI Firmware │
-   │    │                        │  │ ┌────────────────────┐ │
-   │    │ Controls either:       │  │ │ FastAPI + Socket.IO│ │
-   │    │ - RPI backend OR       │◄─┼─┤ (Authoritative)    │ │
-   │    │ - ESP32 device         │  │ │                    │ │
-   │    │                        │  │ └──────┬─────────────┘ │
-   │    │ Multi-device support   │  │   ┌────▼────────────┐  │
-   │    └────────────────────────┘  │   │ Vue.js WebUI    │  │
-   │                                │   │ (Local Control) │  │
-   │                                │   └─────────────────┘  │
-   │                                │   ┌─────────────────┐  │
-   │                                │   │ Hardware Layer  │  │
-   │                                │   │ - PN532 NFC     │  │
-   │                                │   │ - WM8960 Audio  │  │
-   │                                │   │ - GPIO Controls │  │
-   │                                │   └─────────────────┘  │
-   │                                └────────────────────────┘
-   │
-   │    ┌───────────────────────────────────────────────────┐
-   │    │ OPTION B: ESP32 Firmware (Standalone Alternative) │
-   │    │ ┌────────────────────┐  ┌────────────────────┐    │
-   │    │ │ Hexagonal Arch.    │  │ Hardware Adapters  │    │
-   │    │ │ - Domain Models    │  │ - PN532 NFC (SPI)  │    │
-   │    │ │ - Use Cases        │  │ - MAX98357 I2S     │    │
-   ├────┤ │ - REST API         │  │ - WS2812B LEDs     │    │
-   │    │ │ - Socket.IO Server │  │ - SD Storage       │    │
-   │    │ │ (Authoritative)    │  │                    │    │
-   │    │ └────────────────────┘  └────────────────────┘    │
-   │    │ No Web UI (Flutter only)                          │
-   │    └───────────────────────────────────────────────────┘
-   │
-   └───────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph Contracts["📦 Contracts Repository (Shared)"]
+        OpenAPI["openapi.yaml<br/>(REST API)"]
+        SocketIO["socketio_contracts.json<br/>(WebSocket Events)"]
+    end
 
-   Note: Choose EITHER RPI or ESP32 - they are alternative implementations,
-         not meant to run together. Flutter app works with both.
+    subgraph CodeGen["⚙️ Code Generation (v3.1.0)"]
+        OpenAPI --> Gen
+        SocketIO --> Gen
+        Gen[Generator]
+    end
+
+    Gen -->|Generates| DartModels["Dart Models"]
+    Gen -->|Generates| CppModels["C++ Models"]
+    Gen -->|Generates| PythonTS["Python + TypeScript Models"]
+
+    subgraph FlutterBox["📱 Flutter App (Dart)"]
+        DartModels --> Flutter["Remote Control App<br/>• Player UI<br/>• Playlist Management<br/>• mDNS Discovery<br/>• Multi-device Support"]
+    end
+
+    subgraph RPIBox["🥧 OPTION A: Raspberry Pi"]
+        PythonTS --> RPIBackend["FastAPI Backend (Python)<br/>+ Socket.IO<br/>(Authoritative Server)"]
+        PythonTS --> RPIFrontend["Vue.js Web UI<br/>(TypeScript)"]
+        RPIBackend --> RPIHardware["Hardware<br/>• PN532 NFC<br/>• WM8960 Audio<br/>• GPIO Controls"]
+    end
+
+    subgraph ESP32Box["🔧 OPTION B: ESP32"]
+        CppModels --> ESP32Firmware["C++ Firmware<br/>• Hexagonal Architecture<br/>• Domain Models<br/>• REST API<br/>• Socket.IO<br/>(Authoritative Server)"]
+        ESP32Firmware --> ESP32Hardware["Hardware<br/>• PN532 NFC (SPI)<br/>• MAX98357 I2S Audio<br/>• WS2812B LEDs<br/>• SD Storage"]
+    end
+
+    Flutter <-->|Controls| RPIBackend
+    Flutter <-->|Controls| ESP32Firmware
+
+    style Contracts fill:#e1f5ff,stroke:#0288d1,stroke-width:2px
+    style CodeGen fill:#fff3e0,stroke:#ff6f00,stroke-width:2px
+    style FlutterBox fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style RPIBox fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style ESP32Box fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style DartModels fill:#ce93d8,stroke:#7b1fa2
+    style CppModels fill:#fff59d,stroke:#f57f17
+    style PythonTS fill:#81c784,stroke:#388e3c
 ```
+
+**Note:** Choose EITHER RPI or ESP32 - they are alternative implementations, not meant to run together. The Flutter app works as a universal remote for both options.
 
 ---
 
@@ -291,59 +286,9 @@ flutter_app/
 
 ### 4. `esp32-firmware/` - Embedded Hardware Alternative
 
-**Purpose**: Standalone ESP32-S3 music box (complete alternative to Raspberry Pi)
+**Purpose**: Standalone ESP32 music box (complete alternative to Raspberry Pi)
 
-```
-esp32-firmware/
-├── core/
-│   ├── domain/                   # Hexagonal architecture domain models
-│   │   ├── Player.hpp
-│   │   ├── Playlist.hpp
-│   │   ├── Track.hpp
-│   │   ├── Volume.hpp
-│   │   └── NFCTag.hpp
-│   ├── ports/                    # Port interfaces
-│   │   ├── IAudioPort.hpp
-│   │   ├── ILEDPort.hpp
-│   │   └── INFCPort.hpp
-│   └── schemas/                  # Data structures
-│       └── SocketIOEnvelope.hpp
-├── adapters/                     # Hardware implementations
-│   ├── WS2812LEDAdapter.hpp      # WS2812B LED strip
-│   ├── PN532NFCAdapter.hpp       # PN532 NFC reader
-│   ├── I2SAudioAdapter.hpp       # MAX98357 I2S amplifier
-│   └── SPIFFSStorageAdapter.hpp  # File system
-├── app/                          # Application layer
-│   └── main.cpp                  # Entry point
-├── src/                          # REST/WebSocket implementations
-├── contracts/ (submodule)        # Links to contracts repo
-├── platformio.ini                # Build configuration
-└── tests/                        # Unit tests
-```
-
-**Technology Stack**:
-- **Platform**: ESP32-S3 (dual-core, 8MB flash, 2MB PSRAM)
-- **Framework**: Arduino (PlatformIO)
-- **Architecture**: Hexagonal architecture (ports & adapters)
-- **Hardware**: PN532 NFC, MAX98357 I2S audio, WS2812B LEDs, SD card storage
-
-**Development Phases** (Progressive Integration):
-1. ✅ **Phase 1**: Stable hardware foundation (LED, SD, I2S, NFC)
-2. ✅ **Phase 2**: Domain models integration (Player, Track, Playlist)
-3. ✅ **Phase 3**: Hardware adapters (LED, NFC, Audio)
-4. ✅ **Phase 4**: Use cases (PlaybackController, NFCTagHandler)
-5. ✅ **Phase 5**: REST API + Socket.IO server
-
-**Key Features**:
-- **Standalone Operation**: Fully autonomous music box without requiring RPI
-- **REST API**: 85% coverage (26/30 endpoints)
-- **Socket.IO**: 75% coverage (12/16 events)
-- **WebSocket State**: Real-time updates to connected clients
-- **mDNS Discovery**: Advertises as `_tomb._tcp.local`
-- **Captive Portal**: WiFi setup mode for initial configuration
-- **Memory Efficiency**: 280KB+ free heap after init
-- **Hexagonal Architecture**: Clean separation of concerns
-- **No Web UI**: Controlled exclusively via Flutter app (or direct HTTP API)
+**To be announced**
 
 ---
 
@@ -762,30 +707,7 @@ make ci-test
 
 ## 📈 Roadmap
 
-### Immediate (Q4 2024)
-- ✅ **v3.1.0 Contracts**: Add lightweight PlayerState fields, `total_duration_ms`
-- 🔄 **Flutter Migration**: Migrate to generated contract models (Week 2-3)
-- 🔄 **Chunked Upload**: Implement in Flutter + ESP32 (Week 2-3)
-- 🔄 **Real-Time Sync**: Complete Socket.IO integration in Flutter (Week 2)
-
-### Short-Term (Q1 2025)
-- **100% Compliance**: Achieve A+ grade across all repos
-- **ESP32 Model Integration**: Use generated C++ models
-- **Upload Progress UI**: Real-time progress indicators in Flutter
-- **Room Subscriptions**: Full playlist-specific event handling
-
-### Medium-Term (Q2 2025)
-- **Authentication**: Optional PIN/token-based auth (v3.2.0)
-- **Cloud Sync**: Optional cloud backup/sync (v4.0.0)
-- **Multi-User**: Parental controls and child profiles
-- **Analytics**: Usage tracking and insights
-
-### Long-Term (2025+)
-- **Offline Mode**: Full offline support in Flutter app
-- **Smart Recommendations**: AI-powered playlist suggestions
-- **Voice Control**: Integration with voice assistants
-- **Hardware Kits**: Pre-assembled ESP32/RPI kits
-
+- TODO
 ---
 
 ## 📚 Documentation
