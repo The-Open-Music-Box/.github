@@ -1,7 +1,58 @@
 # TheOpenMusicBox - Project Architecture
 
-**Date:** 2025-10-10
-**Version:** 3.1.0
+[![License](https://img.shields.io/badge/License-Custom-blue.svg)](LICENSE)
+[![Contract Version](https://img.shields.io/badge/Contracts-v3.1.0-purple.svg)](https://github.com/theopenmusicbox/contracts)
+
+### 🔧 Technologies
+
+**Backend (RPI):**
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?logo=socketdotio&logoColor=white)](https://socket.io/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Pygame](https://img.shields.io/badge/Pygame-00AA00?logo=python&logoColor=white)](https://www.pygame.org/)
+[![Pydantic](https://img.shields.io/badge/Pydantic-E92063?logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
+[![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?logo=pytest&logoColor=white)](https://pytest.org/)
+
+**Frontend (RPI Web UI):**
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vuedotjs&logoColor=white)](https://vuejs.org/)
+[![Pinia](https://img.shields.io/badge/Pinia-FFD859?logo=vue.js&logoColor=black)](https://pinia.vuejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Axios](https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white)](https://axios-http.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+**Mobile App (Flutter):**
+[![Flutter](https://img.shields.io/badge/Flutter-3.5+-02569B?logo=flutter&logoColor=white)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?logo=dart&logoColor=white)](https://dart.dev/)
+[![Provider](https://img.shields.io/badge/Provider-02569B?logo=flutter&logoColor=white)](https://pub.dev/packages/provider)
+[![Dio](https://img.shields.io/badge/Dio-FF6B6B?logo=dart&logoColor=white)](https://pub.dev/packages/dio)
+
+**Embedded (ESP32):**
+[![C++](https://img.shields.io/badge/C++-17-00599C?logo=cplusplus&logoColor=white)](https://isocpp.org/)
+[![Arduino](https://img.shields.io/badge/Arduino-00979D?logo=arduino&logoColor=white)](https://www.arduino.cc/)
+[![PlatformIO](https://img.shields.io/badge/PlatformIO-FF7F00?logo=platformio&logoColor=white)](https://platformio.org/)
+[![ESP-IDF](https://img.shields.io/badge/ESP--IDF-E7352C?logo=espressif&logoColor=white)](https://docs.espressif.com/projects/esp-idf/)
+
+**API & Contracts:**
+[![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0-6BA539?logo=openapiinitiative&logoColor=white)](https://www.openapis.org/)
+[![JSON Schema](https://img.shields.io/badge/JSON%20Schema-000000?logo=json&logoColor=white)](https://json-schema.org/)
+[![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?logo=socketdotio&logoColor=white)](https://socket.io/)
+
+**Hardware:**
+[![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?logo=raspberrypi&logoColor=white)](https://www.raspberrypi.org/)
+[![ESP32](https://img.shields.io/badge/ESP32--S3-E7352C?logo=espressif&logoColor=white)](https://www.espressif.com/en/products/socs/esp32-s3)
+
+**DevOps & Tools:**
+[![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![systemd](https://img.shields.io/badge/systemd-30302F?logo=linux&logoColor=white)](https://systemd.io/)
+
+---
+
+<a href="https://www.buymeacoffee.com/rhy6j5cdpq9" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+**Version:**
 **Status:** Active Development
 
 ---
@@ -431,8 +482,8 @@ PlayerState:
   active_playlist_id: string | null
   active_playlist_title: string | null
   active_track: Track | null
-  active_track_number: integer | null      # NEW in v3.1.0 (lightweight)
-  active_track_title: string | null        # NEW in v3.1.0 (lightweight)
+  active_track_number: integer | null
+  active_track_title: string | null
   track_index: integer | null              # 0-based index
   track_count: integer | null
   position_ms: integer                     # Current position
@@ -482,7 +533,7 @@ PlaylistDetailed:
   server_seq: number
   created_at: datetime
   updated_at: datetime
-  total_duration_ms: integer               # NEW in v3.1.0
+  total_duration_ms: integer
 ```
 
 ---
@@ -752,12 +803,7 @@ make ci-test
 
 ## 🤝 Contributing
 
-Contributions are welcome! Key areas:
-- **Flutter App**: Migrate to generated models, implement missing endpoints
-- **ESP32 Firmware**: Chunked upload, model integration
-- **Documentation**: API examples, tutorials, hardware guides
-- **Testing**: Contract validation, integration tests
-
+Contributions are welcome!
 See individual repository READMEs for contribution guidelines.
 
 ---
@@ -778,13 +824,15 @@ See [LICENSE](LICENSE) for full terms.
 
 **Jonathan Piette** - Creator & Maintainer
 
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-- 📧 Email: your.email@example.com
+- 🐙 GitHub: [@jonathanpiette](https://github.com/jonathanpiette)
+- 📧 Email: contact@theopenmusicbox.com
 - 💬 Issues: [GitHub Issues](https://github.com/theopenmusicbox)
 
+## 🙏 Special Thanks
+- [@Lynerah](https://github.com/lynerah) for web developement, modelisation
 ---
 
 **Generated:** 2025-10-10
 **Last Updated:** 2025-10-10
-**Version:** 3.1.0
+**Version:** 1.0.0
 **Status:** 🟢 Active Development
