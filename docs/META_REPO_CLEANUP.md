@@ -28,12 +28,10 @@ These files were **not version controlled** and needed evaluation for relevance 
 - **Rationale**: The larger documentation file contains all relevant information plus additional details
 
 #### LOCAL_CI_SETUP.md
-- **Status**: PARTIALLY USEFUL - Contains unique information about `act` tool for running GitHub Actions locally
-- **Decision**: KEEP temporarily, content should be:
-  1. Integrated into a versioned documentation repo (if `act` is still actively used)
-  2. Deleted if `act` is no longer part of the development workflow
-- **Recommendation**: Ask project maintainer if `act` tool documentation is still needed
-- **Unique Content**:
+- **Status**: OBSOLETE - Contains documentation for `act` tool which is no longer used
+- **Decision**: DELETE
+- **Rationale**: The `act` tool for running GitHub Actions locally is no longer part of the development workflow. The project now uses self-hosted GitHub Actions runners in Docker containers instead.
+- **Historical Content**:
   - How to install and use `act` tool
   - `.actrc` configuration files
   - Platform mapping for self-hosted runners
@@ -47,11 +45,10 @@ These files were **not version controlled** and needed evaluation for relevance 
 - [x] Create this cleanup guide
 
 ### Recommended Actions
-- [ ] Confirm with maintainer if `act` tool is still used
-- [ ] If YES: Integrate LOCAL_CI_SETUP.md content into versioned docs
-- [ ] If NO: Delete LOCAL_CI_SETUP.md
-- [ ] Delete CICD_SETUP.md (confirmed redundant)
-- [ ] Keep CONTRIBUTING.md and CLAUDE.md at root
+- [x] Confirm with maintainer if `act` tool is still used (CONFIRMED: No longer used)
+- [x] Delete LOCAL_CI_SETUP.md (obsolete - act tool no longer used)
+- [x] Delete CICD_SETUP.md (confirmed redundant)
+- [x] Keep CONTRIBUTING.md and CLAUDE.md at root
 
 ## Notes
 

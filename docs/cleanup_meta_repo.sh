@@ -82,41 +82,7 @@ echo ""
 
 remove_file "CICD_SETUP.md" "Redundant - content covered in docs/CICD_DOCUMENTATION.md"
 
-echo ""
-echo "=== Files to REVIEW ==="
-echo ""
-
-if [ -f "LOCAL_CI_SETUP.md" ]; then
-    echo -e "${YELLOW}File: LOCAL_CI_SETUP.md${NC}"
-    echo "Contains information about 'act' tool for local CI testing"
-    echo "Question: Is the 'act' tool still actively used in your workflow?"
-    echo ""
-    echo "Options:"
-    echo "  1) Keep - if act is still used"
-    echo "  2) Remove - if act is no longer used"
-    echo "  3) Skip - decide later"
-    echo ""
-    read -p "Enter choice (1/2/3): " -n 1 -r
-    echo ""
-
-    case $REPLY in
-        1)
-            echo -e "${GREEN}✓ Keeping: LOCAL_CI_SETUP.md${NC}"
-            echo "  Consider moving this to version-controlled docs later"
-            ;;
-        2)
-            rm "LOCAL_CI_SETUP.md"
-            echo -e "${GREEN}✓ Removed: LOCAL_CI_SETUP.md${NC}"
-            ;;
-        3)
-            echo -e "${YELLOW}✗ Skipped: LOCAL_CI_SETUP.md${NC}"
-            ;;
-        *)
-            echo -e "${YELLOW}✗ Invalid choice, skipped${NC}"
-            ;;
-    esac
-    echo ""
-fi
+remove_file "LOCAL_CI_SETUP.md" "Obsolete - act tool no longer used in workflow"
 
 echo "========================================="
 echo "Cleanup complete!"
