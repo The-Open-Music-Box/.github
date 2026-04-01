@@ -9,8 +9,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-Custom-blue.svg" alt="License" />
-  <img src="https://img.shields.io/badge/ESP32-v0.4.1-orange" alt="ESP32" />
-  <img src="https://img.shields.io/badge/Flutter-v0.4.1-blue" alt="Flutter" />
   <img src="https://img.shields.io/badge/Contracts-v6.5.0-green" alt="Contracts" />
 </p>
 
@@ -53,8 +51,8 @@ The Open Music Box is a multi-platform project following a **contract-driven dev
 | Component | Description | Tech Stack |
 |-----------|-------------|------------|
 | **[Contracts](https://github.com/The-Open-Music-Box/contracts)** | API specifications & data models (source of truth) | OpenAPI, Socket.IO |
-| **[ESP32 Firmware](https://github.com/The-Open-Music-Box/esp32-firmware)** | Embedded audio player firmware | C++, Arduino, Hexagonal Architecture |
-| **[Flutter App](https://github.com/The-Open-Music-Box/flutter-app)** | Universal mobile remote control | Dart, Flutter, Riverpod |
+| **ESP32 Firmware** | Embedded audio player firmware | C++, Arduino, Hexagonal Architecture |
+| **Flutter App** | Universal mobile remote control | Dart, Flutter, Riverpod |
 | **[Web](https://github.com/The-Open-Music-Box/web)** | Project website | Next.js |
 | **[HIL Testing](https://github.com/The-Open-Music-Box/hil-testing)** | Hardware-in-the-loop test framework | Python |
 
@@ -71,27 +69,20 @@ The Open Music Box is a multi-platform project following a **contract-driven dev
 
 ---
 
-## Getting Started
+## Roadmap
 
-1. **Build the hardware** — See the [ESP32 Firmware repository](https://github.com/The-Open-Music-Box/esp32-firmware) for the full hardware BOM and assembly instructions
-2. **Flash the firmware** — Clone the repo and flash with PlatformIO:
-   ```bash
-   git clone https://github.com/The-Open-Music-Box/esp32-firmware.git
-   cd esp32-firmware
-   pio run -e production -t upload
-   ```
-3. **Install the Flutter app** — Get the [Flutter App](https://github.com/The-Open-Music-Box/flutter-app) on your phone
-4. **Pair your device** and start adding content!
-
-For detailed instructions, see each repository's README.
+| Milestone | Status |
+|-----------|--------|
+| Proof of concept on Raspberry Pi | ✅ Validated — [available here](https://github.com/The-Open-Music-Box/raspberrypi-firmware) |
+| ESP32 embedded firmware | 🔧 Alpha — beta coming soon |
+| Flutter mobile remote control app | 🔧 Alpha — beta coming soon |
 
 ---
 
 ## Documentation
 
 - **[Contracts](https://github.com/The-Open-Music-Box/contracts)** — API specifications and data models
-- **[ESP32 Firmware](https://github.com/The-Open-Music-Box/esp32-firmware)** — Hardware, firmware setup and architecture
-- **[Flutter App](https://github.com/The-Open-Music-Box/flutter-app)** — Mobile app setup and development
+- **[Raspberry Pi Firmware](https://github.com/The-Open-Music-Box/raspberrypi-firmware)** — Original proof of concept
 - **[Project Website](https://www.theopenmusicbox.com)** — Learn more about the project
 
 ---
