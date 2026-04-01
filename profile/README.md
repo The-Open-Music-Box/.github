@@ -53,8 +53,6 @@ The Open Music Box is a multi-platform project following a **contract-driven dev
 | **[Contracts](https://github.com/The-Open-Music-Box/contracts)** | API specifications & data models (source of truth) | OpenAPI, Socket.IO |
 | **ESP32 Firmware** | Embedded audio player firmware | C++, Arduino, Hexagonal Architecture |
 | **Flutter App** | Universal mobile remote control | Dart, Flutter, Riverpod |
-| **[Web](https://github.com/The-Open-Music-Box/web)** | Project website | Next.js |
-| **[HIL Testing](https://github.com/The-Open-Music-Box/hil-testing)** | Hardware-in-the-loop test framework | Python |
 
 ### How it works
 
