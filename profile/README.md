@@ -1,9 +1,18 @@
-# TheOpenMusicBox
+<p align="center">
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/banner-round.png" alt="The Open Music Box" width="600" />
+</p>
 
-![License](https://img.shields.io/badge/License-Custom-blue.svg)
-![RPI: v0.4.1](https://img.shields.io/badge/RPI-v0.4.1-green)
-![ESP32: v0.4.1](https://img.shields.io/badge/ESP32-v0.4.1-orange)
-![Flutter: v0.4.1](https://img.shields.io/badge/Flutter-v0.4.1-blue)
+<p align="center">
+  <strong>A repairable and upgradable audio player for children.</strong><br/>
+  Play stories or music independently using NFC tags — figurines or illustrated cards.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-Custom-blue.svg" alt="License" />
+  <img src="https://img.shields.io/badge/ESP32-v0.4.1-orange" alt="ESP32" />
+  <img src="https://img.shields.io/badge/Flutter-v0.4.1-blue" alt="Flutter" />
+  <img src="https://img.shields.io/badge/Contracts-OpenAPI-green" alt="Contracts" />
+</p>
 
 ---
 
@@ -21,124 +30,86 @@ Here comes **The Open Music Box** project.
 
 ## What is it?
 
-A simple Raspberry Pi with an audio HAT and NFC reader - and you can enjoy it!
+An open-source, NFC-based audio player designed for children — **repairable** by design and **upgradable** over time.
 
-It has a simple web UI to manage your tracks and tags:
+Kids simply tap an NFC tag (a figurine, a card, a sticker) and the music or story starts playing instantly. No screen needed, no complex menus — just tap and listen.
 
-### Your List of Tracks
+### Key Features
 
-Manage your music library with an easy-to-use interface. Add, organize, and play your favorite tracks.
-
-### Easy NFC Association
-
-Simply scan an NFC tag and associate it with a playlist. Touch the tag, and the music starts playing instantly!
-
-### Easy Management
-
-- Add tracks from your local files
-- Download from YouTube
-- Create and organize playlists
-- Control playback with physical buttons or the web interface
-
-### Auto Setup
-
-Automated deployment scripts make installation a breeze. Just run the setup script and you're ready to go!
-
-### Works with Any Compatible Tags*
-
-(*you have to provide the tracks)
-
-Use any NFC tags you have - cards, stickers, figurines. Make your music collection tangible and fun for kids!
+- **Tangible Music Control** — Physical NFC tags make audio interactive and fun for kids
+- **Screen-Free Experience** — No screen needed, just tap a tag and enjoy
+- **Stories & Music** — Play playlists, audiobooks, interactive stories, and podcasts
+- **Mobile App** — Control and manage content from your phone via BLE or WiFi
+- **Auto-Discovery** — Devices are found automatically on your network via mDNS
+- **Repairable & Upgradable** — Standard components, open hardware, designed to last
+- **Open Source** — Fully open for non-commercial use and contributions
 
 ---
 
-## Hardware Options
+## Architecture
 
-### Raspberry Pi Version (Recommended)
+The Open Music Box is a multi-platform project following a **contract-driven development** approach:
 
-- Full-featured music player with web UI
-- YouTube download support
-- Easy setup and deployment
-- Works with Raspberry Pi 3/4/5
+| Component | Description | Tech Stack |
+|-----------|-------------|------------|
+| **[Contracts](https://github.com/The-Open-Music-Box/contracts)** | API specifications & data models (source of truth) | OpenAPI, Socket.IO |
+| **[ESP32 Firmware](https://github.com/The-Open-Music-Box/esp32-firmware)** | Embedded audio player firmware | C++, Arduino, Hexagonal Architecture |
+| **[Flutter App](https://github.com/The-Open-Music-Box/flutter-app)** | Universal mobile remote control | Dart, Flutter |
+| **[Web](https://github.com/The-Open-Music-Box/web)** | Project website | Next.js |
+| **[PCB](https://github.com/The-Open-Music-Box/pcb)** | Custom circuit board design | KiCad |
+| **[HIL Testing](https://github.com/The-Open-Music-Box/hil-testing)** | Hardware-in-the-loop test framework | Python |
 
-**Components:**
-- Raspberry Pi 3/4/5
-- Waveshare WM8960 Audio HAT
-- PN532 NFC Reader
-- Optional: Physical buttons and rotary encoder
+### How it works
 
-### ESP32 Version (In Development)
-
-A standalone, embedded version for a more compact solution.
-
-- Smaller footprint
-- Lower power consumption
-- Ideal for portable applications
-
-**Status:** Alpha - contributions welcome!
-
----
-
-## Flutter App (In Development)
-
-A universal mobile app to control your music box from your phone:
-
-- Works with both Raspberry Pi and ESP32
-- Multi-device support
-- mDNS auto-discovery
-- Real-time synchronization
-
-**Status:** Alpha - contributions welcome!
-
----
-
-## Features
-
-- **Tangible Music Control**: Physical NFC tags make music interactive and fun for kids
-- **Screen-Free Experience**: No screens needed - just tap a tag and enjoy
-- **Easy Management**: Simple web interface to organize your music
-- **Multi-Platform**: Choose between Raspberry Pi or ESP32 hardware
-- **Open Source**: Fully open for non-commercial use and contributions
+```
+┌─────────────┐     NFC Tag      ┌──────────────┐     WiFi/BLE     ┌──────────────┐
+│  Figurine   │ ──── tap ────▶   │   ESP32 Box  │ ◀──────────────▶ │  Flutter App │
+│  or Card    │                  │  (firmware)  │                  │  (remote)    │
+└─────────────┘                  └──────────────┘                  └──────────────┘
+                                       │
+                                   Speaker 🔊
+```
 
 ---
 
 ## Getting Started
 
-### Quick Start (Raspberry Pi)
+### Hardware
 
-1. Flash Raspbian on your SD card
-2. Install the audio HAT and connect the NFC reader
-3. Clone the repository:
-   ```bash
-   git clone https://github.com/The-Open-Music-Box/raspberrypi-firmware.git
-   cd raspberrypi-firmware
-   ```
-4. Run the setup script:
-   ```bash
-   ./setup.sh
-   ```
-5. Access the web UI at `http://theopenmusicbox.local:5004`
+- ESP32-S3 development board
+- PN532 NFC Reader
+- I2S DAC + Speaker
+- SD Card for audio storage
+- Optional: D-pad buttons, LED ring
 
-For detailed installation instructions, see the [Technical Specifications](TECHNICAL_SPECIFICATIONS.md).
+### Software
+
+1. Clone the firmware:
+   ```bash
+   git clone https://github.com/The-Open-Music-Box/esp32-firmware.git
+   ```
+2. Flash with PlatformIO
+3. Install the Flutter app on your phone
+4. Pair your device and start adding content!
+
+For detailed instructions, see the [Technical Specifications](TECHNICAL_SPECIFICATIONS.md).
 
 ---
 
 ## Documentation
 
-- **[Technical Specifications](TECHNICAL_SPECIFICATIONS.md)** - Full technical details, architecture, and API documentation
-- **[Contracts Repository](https://github.com/The-Open-Music-Box/contracts)** - API specifications and data models
-- **[RPI Firmware](https://github.com/The-Open-Music-Box/raspberrypi-firmware)** - Raspberry Pi implementation
-- **[ESP32 Firmware](https://github.com/The-Open-Music-Box/esp32-firmware)** - ESP32 embedded implementation (coming soon)
-- **[Flutter App](https://github.com/The-Open-Music-Box/flutter_app)** - Mobile application (coming soon)
+- **[Technical Specifications](TECHNICAL_SPECIFICATIONS.md)** — Full technical details, architecture, and API documentation
+- **[Contracts](https://github.com/The-Open-Music-Box/contracts)** — API specifications and data models
+- **[Project Website](https://www.theopenmusicbox.com)** — Learn more about the project
 
 ---
 
 ## Contributing
 
 Contributions are welcome! Whether you want to:
-- Add features to the RPI version
-- Help develop the ESP32 firmware
+- Add features to the ESP32 firmware
 - Build the Flutter app
+- Design new PCB revisions
 - Improve documentation
 - Report bugs
 
@@ -157,16 +128,18 @@ Feel free to open an issue or submit a pull request.
 See [LICENSE](LICENSE) for full terms.
 
 ---
-## Special thanks
 
-[@Lynerah](https://github.com/lynerah) for web development and 3d modeling
+## Special Thanks
+
+[@Lynerah](https://github.com/lynerah) for web development and 3D modeling
 
 ## Contact
 
-**Jonathan Piette** - Creator & Maintainer
+**Jonathan Piette** — Creator & Maintainer
 
 - GitHub: [@jonathanpiette](https://github.com/jonathanpiette)
 - Email: contact@theopenmusicbox.com
+- Website: [theopenmusicbox.com](https://www.theopenmusicbox.com)
 - Issues: [GitHub Issues](https://github.com/The-Open-Music-Box)
 
 ## Support the Project
