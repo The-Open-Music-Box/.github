@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/License-Custom-blue.svg" alt="License" />
   <img src="https://img.shields.io/badge/ESP32-v0.4.1-orange" alt="ESP32" />
   <img src="https://img.shields.io/badge/Flutter-v0.4.1-blue" alt="Flutter" />
-  <img src="https://img.shields.io/badge/Contracts-OpenAPI-green" alt="Contracts" />
+  <img src="https://img.shields.io/badge/Contracts-v6.5.0-green" alt="Contracts" />
 </p>
 
 ---
@@ -54,9 +54,8 @@ The Open Music Box is a multi-platform project following a **contract-driven dev
 |-----------|-------------|------------|
 | **[Contracts](https://github.com/The-Open-Music-Box/contracts)** | API specifications & data models (source of truth) | OpenAPI, Socket.IO |
 | **[ESP32 Firmware](https://github.com/The-Open-Music-Box/esp32-firmware)** | Embedded audio player firmware | C++, Arduino, Hexagonal Architecture |
-| **[Flutter App](https://github.com/The-Open-Music-Box/flutter-app)** | Universal mobile remote control | Dart, Flutter |
+| **[Flutter App](https://github.com/The-Open-Music-Box/flutter-app)** | Universal mobile remote control | Dart, Flutter, Riverpod |
 | **[Web](https://github.com/The-Open-Music-Box/web)** | Project website | Next.js |
-| **[PCB](https://github.com/The-Open-Music-Box/pcb)** | Custom circuit board design | KiCad |
 | **[HIL Testing](https://github.com/The-Open-Music-Box/hil-testing)** | Hardware-in-the-loop test framework | Python |
 
 ### How it works
@@ -74,32 +73,25 @@ The Open Music Box is a multi-platform project following a **contract-driven dev
 
 ## Getting Started
 
-### Hardware
-
-- ESP32-S3 development board
-- PN532 NFC Reader
-- I2S DAC + Speaker
-- SD Card for audio storage
-- Optional: D-pad buttons, LED ring
-
-### Software
-
-1. Clone the firmware:
+1. **Build the hardware** — See the [ESP32 Firmware repository](https://github.com/The-Open-Music-Box/esp32-firmware) for the full hardware BOM and assembly instructions
+2. **Flash the firmware** — Clone the repo and flash with PlatformIO:
    ```bash
    git clone https://github.com/The-Open-Music-Box/esp32-firmware.git
+   cd esp32-firmware
+   pio run -e production -t upload
    ```
-2. Flash with PlatformIO
-3. Install the Flutter app on your phone
-4. Pair your device and start adding content!
+3. **Install the Flutter app** — Get the [Flutter App](https://github.com/The-Open-Music-Box/flutter-app) on your phone
+4. **Pair your device** and start adding content!
 
-For detailed instructions, see the [Technical Specifications](TECHNICAL_SPECIFICATIONS.md).
+For detailed instructions, see each repository's README.
 
 ---
 
 ## Documentation
 
-- **[Technical Specifications](TECHNICAL_SPECIFICATIONS.md)** — Full technical details, architecture, and API documentation
 - **[Contracts](https://github.com/The-Open-Music-Box/contracts)** — API specifications and data models
+- **[ESP32 Firmware](https://github.com/The-Open-Music-Box/esp32-firmware)** — Hardware, firmware setup and architecture
+- **[Flutter App](https://github.com/The-Open-Music-Box/flutter-app)** — Mobile app setup and development
 - **[Project Website](https://www.theopenmusicbox.com)** — Learn more about the project
 
 ---
@@ -109,7 +101,6 @@ For detailed instructions, see the [Technical Specifications](TECHNICAL_SPECIFIC
 Contributions are welcome! Whether you want to:
 - Add features to the ESP32 firmware
 - Build the Flutter app
-- Design new PCB revisions
 - Improve documentation
 - Report bugs
 
@@ -140,7 +131,6 @@ See [LICENSE](LICENSE) for full terms.
 - GitHub: [@jonathanpiette](https://github.com/jonathanpiette)
 - Email: contact@theopenmusicbox.com
 - Website: [theopenmusicbox.com](https://www.theopenmusicbox.com)
-- Issues: [GitHub Issues](https://github.com/The-Open-Music-Box)
 
 ## Support the Project
 
