@@ -50,8 +50,8 @@ Kids tap an NFC tag — a figurine, a card, a sticker — and the music or story
 | **Stories & Music** | Playlists, audiobooks, interactive stories, podcasts |
 | **Mobile App** | Control and manage content via BLE or WiFi |
 | **Auto-Discovery** | Devices found automatically on your network (mDNS) |
-| **Repairable** | Standard components, open hardware, designed to last |
-| **Open Source** | Free for non-commercial use and contributions |
+| **Repairable** | Standard components, designed to last |
+| **Yours to keep** | No tracking, no mandatory subscription — your media stays yours |
 
 ---
 
@@ -61,7 +61,7 @@ Contract-driven development — the API spec is the source of truth, shared acro
 
 | Component | Description | Tech |
 |-----------|-------------|------|
-| **[Contracts](https://github.com/The-Open-Music-Box/contracts)** | API specs & data models | OpenAPI, Socket.IO |
+| **Contracts** | API specs & data models | OpenAPI, Socket.IO |
 | **ESP32 Firmware** | Embedded audio player | C++, Hexagonal Architecture |
 | **Flutter App** | Mobile remote control | Dart, Riverpod |
 
@@ -77,9 +77,9 @@ Contract-driven development — the API spec is the source of truth, shared acro
 
 ---
 
-### Contributing
+### Get involved
 
-Contributions are welcome! Join the community, report bugs, or submit a pull request.
+The product source is currently private, so we're not taking external code contributions yet. The best way to help: join the community on Discord and share feedback.
 
 ---
 
@@ -102,15 +102,14 @@ Contributions are welcome! Join the community, report bugs, or submit a pull req
 
 ---
 
-### License
+### Source & licensing
 
-**Open Source with Reserved Commercial Rights** — Free for non-commercial use. Commercial use requires licensing from the original author.
-See [LICENSE](LICENSE) for full terms.
+The original **Raspberry Pi proof-of-concept** is open source and free to use (commercial use requires licensing from the original author — see [LICENSE](LICENSE)). The **current product** (ESP32 firmware, mobile app, backend) is **not open source** and its source is **not public** at this time.
 
 ---
 
 <p align="center">
-  <strong>Special thanks to <a href="https://github.com/lynerah">@Lynerah</a></strong> for web development and 3D modeling
+  <strong>Special thanks to <a href="https://monatelierweb.com">Mon Atelier Web</a></strong> for web development and 3D modeling of the prototype
 </p>
 
 <p align="center">
