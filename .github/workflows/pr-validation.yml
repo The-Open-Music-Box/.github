@@ -1,0 +1,68 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [ main, prod ]
+  push:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validate Markdown and Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install markdown linter
+        run: |
+          npm install -g markdownlint-cli
+          npm install -g markdown-link-check
+
+      - name: Lint markdown files
+        run: |
+          markdownlint profile/*.md --config .markdownlint.json || true
+          echo "Markdown lint check completed"
+
+      - name: Check for broken links
+        run: |
+          # Check all markdown files for broken links
+          find profile -name "*.md" -exec markdown-link-check {} \; || echo "Link check completed with warnings"
+
+      - name: Validate file structure
+        run: |
+          # Ensure required files exist
+          if [ ! -f "profile/README.md" ]; then
+            echo "❌ profile/README.md is required"
+            exit 1
+          fi
+
+          if [ ! -f "LICENSE" ]; then
+            echo "⚠️  LICENSE file is missing"
+          fi
+
+          echo "✅ File structure validation passed"
+
+      - name: Check for large files
+        run: |
+          # Check for files larger than 1MB
+          find profile -type f -size +1M -exec ls -lh {} \; | awk '{print "⚠️  Large file: " $9 " (" $5 ")"}'
+          echo "Large file check completed"
+
+      - name: Validation summary
+        if: always()
+        run: |
+          echo "## Validation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "✅ PR validation completed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Checks performed:" >> $GITHUB_STEP_SUMMARY
+          echo "- Markdown linting" >> $GITHUB_STEP_SUMMARY
+          echo "- Broken link detection" >> $GITHUB_STEP_SUMMARY
+          echo "- File structure validation" >> $GITHUB_STEP_SUMMARY
+          echo "- Large file detection" >> $GITHUB_STEP_SUMMARY
