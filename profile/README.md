@@ -1,115 +1,133 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/banner-round.png" alt="The Open Music Box" width="600" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-hero.png" alt="The Open Music Box, screen-free audio player for kids" width="800" />
 </p>
 
 <p align="center">
-  <strong>A repairable and upgradable audio player for children.</strong><br/>
-  Play stories or music independently using NFC tags — figurines or illustrated cards.
+  <strong>MusicBox is a screen-free audio player for children.</strong><br/>
+  You fill it with your own music and stories, link them to a card, and your child listens on their own.<br/>
+  No subscription, no account, no screen.
 </p>
 
 <p align="center">
-  <a href="https://theopenmusicbox.com"><img src="https://img.shields.io/badge/Website-theopenmusicbox.com-A3C9A8?style=flat-square&logo=google-chrome&logoColor=white" alt="Website" /></a>
-  <a href="https://discord.gg/5sUnQ553Af"><img src="https://img.shields.io/badge/Discord-Join%20us-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord" /></a>
-  <img src="https://img.shields.io/badge/License-Custom-blue?style=flat-square" alt="License" />
-  <img src="https://img.shields.io/badge/Contracts-v6.5.0-green?style=flat-square" alt="Contracts" />
+  <a href="https://theopenmusicbox.com"><img src="https://img.shields.io/badge/Website-theopenmusicbox.com-264C6E?style=flat-square&labelColor=C7DEC9" alt="Website" /></a>
+  <a href="https://discord.gg/5sUnQ553Af"><img src="https://img.shields.io/badge/Discord-join%20the%20community-264C6E?style=flat-square&labelColor=FFE8B0" alt="Discord" /></a>
+  <a href="https://testflight.apple.com/join/5vC2Dfzg"><img src="https://img.shields.io/badge/iOS%20app-open%20beta-264C6E?style=flat-square&labelColor=F8C9B9" alt="iOS app open beta" /></a>
+  <img src="https://img.shields.io/badge/Android%20app-closed%20beta-264C6E?style=flat-square&labelColor=E8DFC9" alt="Android app closed beta" />
+  <img src="https://img.shields.io/badge/Firmware-0.6.0--beta.3-264C6E?style=flat-square&labelColor=FDF8EF" alt="Firmware 0.6.0-beta.3" />
 </p>
 
----
+<br/>
 
-### The Story
+<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-story.png" alt="The story" width="100%" />
 
 I wanted to share my passion with my kids: music and video games.
 
-I built a quick Python script on a Raspberry Pi that plays audio tracks when scanning an NFC tag. My kid just LOVED it! Instead of stupid songs, I was listening to my favorite video game tracks as my son discovered them. It needed an easy UI so users can manage tracks and tags without touching code.
+I built a quick Python script on a Raspberry Pi that played a track when an NFC tag was scanned. My kid loved it. Instead of nursery rhymes on repeat, I was listening to my favourite video game soundtracks while my son discovered them. It needed an easy way to add tracks and tags without touching code.
 
-Here comes **The Open Music Box**.
+That was the proof of concept. Today The Open Music Box is a real product in the making: a compact ESP32 player, a mobile app, and a design that keeps one promise. What you bought stays yours.
 
----
+<br/>
 
-### How it works
+<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-how.png" alt="How it works" width="100%" />
 
-```
-   NFC Tag             WiFi / BLE
-┌───────────┐       ┌──────────────┐       ┌──────────────┐
-│ Figurine  │──tap──│  ESP32 Box   │◀─────▶│  Flutter App │
-│ or Card   │       │  (firmware)  │       │  (remote)    │
-└───────────┘       └──────┬───────┘       └──────────────┘
-                        Speaker
-```
+<table>
+  <tr>
+    <td width="42%" valign="top">
+      <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/musicbox-v4-render.jpg" alt="The MusicBox V4 prototype with a card in its slot" width="100%" />
+    </td>
+    <td valign="top">
+      <p><strong>What you do from your phone</strong><br/>
+      You add your music, your stories and your podcasts, you create playlists and you link each one to an NFC card. Standard cards, stickers or figurines, nothing proprietary.</p>
+      <p><strong>What your child does</strong><br/>
+      Place the card on the MusicBox and it plays. Take it off and it stops. Four buttons for volume and tracks, nothing else to learn, and no need to know how to read.</p>
+      <p><strong>Where it works</strong><br/>
+      In the bedroom, in the car, at the grandparents. The MusicBox plays its content on its own, with no server to reach and no account to revalidate.</p>
+    </td>
+  </tr>
+</table>
 
-Kids tap an NFC tag — a figurine, a card, a sticker — and the music or story starts playing instantly. No screen, no complex menus. Just tap and listen.
+<br/>
 
----
+<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises.png" alt="What you get" width="100%" />
 
-### Key Features
+Connected things for children raise a simple question: who owns what you bought? The MusicBox is designed so the answer is you.
 
 | | |
 |---|---|
-| **Tangible Control** | Physical NFC tags make audio interactive and fun |
-| **Screen-Free** | No screen needed — just tap a tag and enjoy |
-| **Stories & Music** | Playlists, audiobooks, interactive stories, podcasts |
-| **Mobile App** | Control and manage content via BLE or WiFi |
-| **Auto-Discovery** | Devices found automatically on your network (mDNS) |
-| **Repairable** | Standard components, designed to last |
-| **Yours to keep** | No tracking, no mandatory subscription — your media stays yours |
+| **Your music, your stories** | You put in whatever you want, and it stays yours. No house catalogue, nothing that vanishes the day a catalogue shuts down. |
+| **Works without internet** | No cloud in the loop. The day the project stops, the MusicBox keeps playing. |
+| **Repairable by design** | Standard parts, chosen so they can be swapped. Nothing glued shut for good. |
+| **No account, no ads** | Nothing to sign up for, nothing watching your child. |
+| **No screen, and that is the point** | No scrolling, no video queueing itself up, no notification. Your child listens and imagines. |
 
----
+<br/>
 
-### Architecture
+<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-build.png" alt="Build your own MusicBox" width="100%" />
 
-Contract-driven development — the API spec is the source of truth, shared across all platforms.
+Handy with tools? The assembly guide, the parts list and the software are on the website, and the community helps out on Discord.
 
-| Component | Description | Tech |
-|-----------|-------------|------|
-| **Contracts** | API specs & data models | OpenAPI, Socket.IO |
-| **ESP32 Firmware** | Embedded audio player | C++, Hexagonal Architecture |
-| **Flutter App** | Mobile remote control | Dart, Riverpod |
+| Path | What you need | Status |
+|---|---|---|
+| **Breadboard** | Off-the-shelf parts, a breadboard, Dupont wires and an enclosure of your own | Available |
+| **HermitX development board** | An all-in-one board with the NFC antenna, a 3 W speaker and an NTAG215 card, a soldering iron and a 3D printer | Available |
+| **The Open Music Box player** | Our own board, with audio jack and battery management. Nothing to solder or print | Coming |
 
----
+1. **Assemble the hardware** following the [build guide](https://theopenmusicbox.com/en/build/), BOM and wiring included.
+2. **Print the V4 enclosure** for the HermitX path: three parts, STL and 3MF, on [Printables](https://www.printables.com/model/1839324).
+3. **Flash the firmware straight from your browser**, nothing to install: [theopenmusicbox.com/en/build/flash](https://theopenmusicbox.com/en/build/flash/).
+4. **Install the app**, add your music and stories, link them to cards.
 
-### Roadmap
+<br/>
+
+<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-status.png" alt="Where we are" width="100%" />
 
 | Milestone | Status |
-|-----------|--------|
-| Proof of concept (Raspberry Pi) | ✅ Validated — [source available](https://github.com/The-Open-Music-Box/raspberrypi-firmware) |
-| ESP32 embedded firmware | 🔧 Alpha — beta coming soon |
-| Flutter mobile app | 🔧 Alpha — beta coming soon |
+|---|---|
+| Raspberry Pi proof of concept | Validated, [source available](https://github.com/The-Open-Music-Box/raspberrypi-firmware) (archived) |
+| ESP32 firmware | Beta, installable from the browser |
+| iOS app | Open beta on [TestFlight](https://testflight.apple.com/join/5vC2Dfzg) |
+| Android app | Closed beta, [become a tester](mailto:contact@theopenmusicbox.com?subject=I%20want%20to%20test%20the%20Android%20beta) |
+| HermitX development board path | Available, 3D enclosure V4 published |
+| The Open Music Box player board | In design |
 
----
+Under the hood, everything is contract-driven: one API specification (OpenAPI and Socket.IO) is the source of truth shared by the ESP32 firmware (C++, hexagonal architecture), the Flutter app (Dart, Riverpod) and the backend (Rust).
 
-### Get involved
+<br/>
 
-The product source is currently private, so we're not taking external code contributions yet. The best way to help: join the community on Discord and share feedback.
-
----
-
-### Connect
+<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-follow.png" alt="Follow the project" width="100%" />
 
 <p align="center">
-  <a href="https://theopenmusicbox.com"><img src="https://img.shields.io/badge/Website-A3C9A8?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" /></a>
-  <a href="https://discord.gg/5sUnQ553Af"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://bsky.app/profile/theopenmusicbox.bsky.social"><img src="https://img.shields.io/badge/Bluesky-1185FE?style=for-the-badge&logo=bluesky&logoColor=white" alt="Bluesky" /></a>
-  <a href="https://www.facebook.com/theopenmusicbox"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
-  <a href="https://www.instagram.com/theopenmusicbox/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  <a href="https://www.linkedin.com/in/jonathan-piette-110aa33bb/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/The-Open-Music-Box"><img src="https://img.shields.io/badge/GitHub-264C6E?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://theopenmusicbox.com"><img src="https://img.shields.io/badge/Website-264C6E?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" /></a>
+  <a href="https://discord.gg/5sUnQ553Af"><img src="https://img.shields.io/badge/Discord-264C6E?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://www.instagram.com/theopenmusicbox/"><img src="https://img.shields.io/badge/Instagram-264C6E?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+  <a href="https://www.facebook.com/theopenmusicbox"><img src="https://img.shields.io/badge/Facebook-264C6E?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
+  <a href="https://bsky.app/profile/theopenmusicbox.bsky.social"><img src="https://img.shields.io/badge/Bluesky-264C6E?style=for-the-badge&logo=bluesky&logoColor=white" alt="Bluesky" /></a>
+  <a href="https://www.printables.com/model/1839324"><img src="https://img.shields.io/badge/Printables-264C6E?style=for-the-badge&logo=printables&logoColor=white" alt="Printables" /></a>
+  <a href="https://links.theopenmusicbox.com"><img src="https://img.shields.io/badge/All%20links-F27B70?style=for-the-badge" alt="All links" /></a>
 </p>
 
 <p align="center">
-  <strong>Jonathan Piette</strong> — Creator & Maintainer<br/>
-  contact@theopenmusicbox.com
+  Newsletter: <a href="https://theopenmusicbox.com">theopenmusicbox.com</a> &nbsp;·&nbsp; Contact: <a href="mailto:contact@theopenmusicbox.com">contact@theopenmusicbox.com</a>
 </p>
 
----
+<p align="center">
+  <strong>Jonathan Piette</strong>, creator and maintainer &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/jonathan-piette-110aa33bb/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/jonathanpiette">GitHub</a>
+</p>
 
-### Source & licensing
+<br/>
 
-The original **Raspberry Pi proof-of-concept** is open source and free to use (commercial use requires licensing from the original author — see [LICENSE](LICENSE)). The **current product** (ESP32 firmware, mobile app, backend) is **not open source** and its source is **not public** at this time.
+### Source and licensing
 
----
+The original **Raspberry Pi proof of concept** is source available and free to use for non-commercial purposes (commercial use requires licensing from the original author, see [LICENSE](LICENSE)). Its [technical specifications](TECHNICAL_SPECIFICATIONS.md) are kept for reference.
+
+The **current product** (ESP32 firmware, mobile app, backend) is **not open source** and its source is **not public** at this time. The "Open" in the name is a promise about lock-in, not about code: your content stays yours, the hardware is repairable, and nothing depends on us to keep working.
+
+We are not taking external code contributions for now. The best way to help: build one, share your feedback on Discord, and tell the parents around you.
+
+<br/>
 
 <p align="center">
-  <strong>Special thanks to <a href="https://monatelierweb.com">Mon Atelier Web</a></strong> for web development and 3D modeling of the prototype
+  Special thanks to <a href="https://monatelierweb.com">Mon Atelier Web</a> for the web development and 3D modeling of the prototype.
 </p>
 
 <p align="center">
