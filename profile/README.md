@@ -13,7 +13,7 @@
   <a href="https://discord.gg/5sUnQ553Af"><img src="https://img.shields.io/badge/Discord-join%20the%20community-264C6E?style=flat-square&labelColor=FFE8B0" alt="Discord" /></a>
   <a href="https://testflight.apple.com/join/5vC2Dfzg"><img src="https://img.shields.io/badge/iOS%20app-open%20beta-264C6E?style=flat-square&labelColor=F8C9B9" alt="iOS app open beta" /></a>
   <img src="https://img.shields.io/badge/Android%20app-closed%20beta-264C6E?style=flat-square&labelColor=E8DFC9" alt="Android app closed beta" />
-  <img src="https://img.shields.io/badge/Firmware-0.6.0--beta.3-264C6E?style=flat-square&labelColor=FDF8EF" alt="Firmware 0.6.0-beta.3" />
+  <a href="https://github.com/The-Open-Music-Box/enclosure"><img src="https://img.shields.io/badge/Enclosure-CERN--OHL--S%20v2-264C6E?style=flat-square&labelColor=FDF8EF" alt="Enclosure under CERN-OHL-S v2" /></a>
 </p>
 
 <br/>
@@ -73,7 +73,7 @@ Handy with tools? The assembly guide, the parts list and the software are on the
 | **The Open Music Box player** | Our own board, with audio jack and battery management. Nothing to solder or print | Coming |
 
 1. **Assemble the hardware** following the [build guide](https://theopenmusicbox.com/en/build/), BOM and wiring included.
-2. **Print the V4 enclosure** for the HermitX path: three parts, STL and 3MF, on [Printables](https://www.printables.com/model/1839324).
+2. **Print the V4 enclosure** for the HermitX path: three parts, STL and 3MF, on [Printables](https://www.printables.com/model/1839324) or [on GitHub](https://github.com/The-Open-Music-Box/enclosure).
 3. **Flash the firmware straight from your browser**, nothing to install: [theopenmusicbox.com/en/build/flash](https://theopenmusicbox.com/en/build/flash/).
 4. **Install the app**, add your music and stories, link them to cards.
 
@@ -91,6 +91,18 @@ Handy with tools? The assembly guide, the parts list and the software are on the
 | The Open Music Box player board | In design |
 
 Under the hood, everything is contract-driven: one API specification (OpenAPI and Socket.IO) is the source of truth shared by the ESP32 firmware (C++, hexagonal architecture), the Flutter app (Dart, Riverpod) and the backend (Rust).
+
+<br/>
+
+### What is public here
+
+| Repository | What it holds |
+|---|---|
+| **[enclosure](https://github.com/The-Open-Music-Box/enclosure)** | The 3D-printable enclosure of the Prototype V4: body, top and card holder, as STL and 3MF, under CERN-OHL-S v2. Print it, change it, sell what you build, as long as your own files stay open under the same licence. |
+| **[raspberrypi-firmware](https://github.com/The-Open-Music-Box/raspberrypi-firmware)** | The Raspberry Pi proof of concept that started all this, kept as it was. |
+| **[update-provider](https://github.com/The-Open-Music-Box/update-provider)** | The endpoint the app asks for firmware updates. Public so that anyone can see what the box fetches, and from where. |
+
+The product repositories (ESP32 firmware, mobile app, backend) are private. Why, and what that does and does not mean for you, is set out under [Source and licensing](#source-and-licensing) below.
 
 <br/>
 
@@ -119,6 +131,8 @@ Under the hood, everything is contract-driven: one API specification (OpenAPI an
 ### Source and licensing
 
 The original **Raspberry Pi proof of concept** is source available and free to use for non-commercial purposes (commercial use requires licensing from the original author, see [LICENSE](LICENSE)). Its [technical specifications](TECHNICAL_SPECIFICATIONS.md) are kept for reference.
+
+The **enclosure of the Prototype V4** is released under **[CERN-OHL-S v2](https://github.com/The-Open-Music-Box/enclosure)**, a strongly reciprocal open hardware licence. You may print it, modify it, share it and sell hardware based on it, as long as your modified design files stay open under the same licence, with attribution and a link to your source.
 
 The **current product** (ESP32 firmware, mobile app, backend) is **not open source** and its source is **not public** at this time. The "Open" in the name is a promise about lock-in, not about code: your content stays yours, the hardware is repairable, and nothing depends on us to keep working.
 
