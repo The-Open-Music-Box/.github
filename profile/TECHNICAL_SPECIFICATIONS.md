@@ -461,7 +461,7 @@ PlaylistDetailed:
 
 ### Server-Authoritative Architecture
 
-**Principle**: The backend (RPI or ESP32) is the **single source of truth**. Clients **never directly mutate state** — they request operations, and the server broadcasts authoritative updates.
+**Principle**: The backend (RPI or ESP32) is the **single source of truth**. Clients **never directly mutate state**<br/>they request operations, and the server broadcasts authoritative updates.
 
 #### Flow
 
@@ -575,7 +575,7 @@ interface StateEvent {
 | **esp32-firmware/** | 85% (26/30) | 75% (12/16) | ⚠️ Custom (model integration pending) | B |
 | **Overall** | **82%** | **78%** | **50%** | **B-** |
 
-**Target**: 100% compliance (A+ grade) — see [HARMONIZATION_PLAN.md](HARMONIZATION_PLAN.md)
+**Target**: 100% compliance (A+ grade), see [HARMONIZATION_PLAN.md](HARMONIZATION_PLAN.md)
 
 ---
 
