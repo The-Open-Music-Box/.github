@@ -69,11 +69,11 @@ Handy with tools? The assembly guide, the parts list and the software are on the
 | Path | What you need | Status |
 |---|---|---|
 | **Breadboard** | Off-the-shelf parts, a breadboard, Dupont wires and an enclosure of your own | Available |
-| **HermitX development board** | An all-in-one board with the NFC antenna, a 3 W speaker and an NTAG215 card, a soldering iron and a 3D printer | Available |
+| **Development board** | An all-in-one HermitX board with the NFC antenna, a 3 W speaker and an NTAG215 card, a soldering iron and a 3D printer | Available |
 | **The Open Music Box player** | Our own board, with audio jack and battery management. Nothing to solder or print | Coming |
 
 1. **Assemble the hardware** following the [build guide](https://theopenmusicbox.com/en/build/), BOM and wiring included.
-2. **Print the V4 enclosure** for the HermitX path: three parts, STL and 3MF, on [Printables](https://www.printables.com/model/1839324) or [on GitHub](https://github.com/The-Open-Music-Box/enclosure).
+2. **Print the V4 enclosure** for the development board path: three parts, STL and 3MF, on [Printables](https://www.printables.com/model/1839324) or [on GitHub](https://github.com/The-Open-Music-Box/enclosure).
 3. **Flash the firmware straight from your browser**, nothing to install: [theopenmusicbox.com/en/build/flash](https://theopenmusicbox.com/en/build/flash/).
 4. **Install the app**, add your music and stories, link them to cards.
 
@@ -87,7 +87,7 @@ Handy with tools? The assembly guide, the parts list and the software are on the
 | ESP32 firmware | Beta, installable from the browser |
 | iOS app | Open beta on [TestFlight](https://testflight.apple.com/join/5vC2Dfzg) |
 | Android app | Closed beta, [become a tester](mailto:contact@theopenmusicbox.com?subject=I%20want%20to%20test%20the%20Android%20beta) |
-| HermitX development board path | Available, 3D enclosure V4 published |
+| Development board path | Available, 3D enclosure V4 published |
 | The Open Music Box player board | In design |
 
 Under the hood, everything is contract-driven: one API specification (OpenAPI and Socket.IO) is the source of truth shared by the ESP32 firmware (C++, hexagonal architecture), the Flutter app (Dart, Riverpod) and the backend (Rust).
@@ -108,15 +108,10 @@ The product repositories (ESP32 firmware, mobile app, backend) are private. Why,
 
 <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-follow.png" alt="Follow the project" width="100%" />
 
-<p align="center">
-  <a href="https://theopenmusicbox.com"><img src="https://img.shields.io/badge/Website-264C6E?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" /></a>
-  <a href="https://discord.gg/5sUnQ553Af"><img src="https://img.shields.io/badge/Discord-264C6E?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://www.instagram.com/theopenmusicbox/"><img src="https://img.shields.io/badge/Instagram-264C6E?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  <a href="https://www.facebook.com/theopenmusicbox"><img src="https://img.shields.io/badge/Facebook-264C6E?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
-  <a href="https://bsky.app/profile/theopenmusicbox.bsky.social"><img src="https://img.shields.io/badge/Bluesky-264C6E?style=for-the-badge&logo=bluesky&logoColor=white" alt="Bluesky" /></a>
-  <a href="https://www.printables.com/model/1839324"><img src="https://img.shields.io/badge/Printables-264C6E?style=for-the-badge&logo=printables&logoColor=white" alt="Printables" /></a>
-  <a href="https://links.theopenmusicbox.com"><img src="https://img.shields.io/badge/All%20links-F27B70?style=for-the-badge" alt="All links" /></a>
-</p>
+| | | | | | | | |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| [<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-website.png" width="72" alt="Website">](https://theopenmusicbox.com) | [<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-discord.png" width="72" alt="Discord">](https://discord.gg/5sUnQ553Af) | [<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-instagram.png" width="72" alt="Instagram">](https://www.instagram.com/theopenmusicbox/) | [<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-facebook.png" width="72" alt="Facebook">](https://www.facebook.com/theopenmusicbox) | [<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-bluesky.png" width="72" alt="Bluesky">](https://bsky.app/profile/theopenmusicbox.bsky.social) | [<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-printables.png" width="72" alt="Printables">](https://www.printables.com/model/1839324) | [<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-links.png" width="72" alt="All links">](https://links.theopenmusicbox.com) | [<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-mail.png" width="72" alt="Email">](mailto:contact@theopenmusicbox.com) |
+| Website | Discord | Instagram | Facebook | Bluesky | Printables | All links | Email |
 
 <p align="center">
   Newsletter: <a href="https://theopenmusicbox.com">theopenmusicbox.com</a> &nbsp;·&nbsp; Contact: <a href="mailto:contact@theopenmusicbox.com">contact@theopenmusicbox.com</a>
