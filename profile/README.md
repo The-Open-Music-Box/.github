@@ -90,7 +90,7 @@ Handy with tools? The assembly guide, the parts list and the software are on the
 **The Open Music Box player** *(coming)*<br/>Our own board, with audio jack and battery management. Nothing to solder or print.
 
 1. **Assemble the hardware** following the [build guide](https://theopenmusicbox.com/en/build/), BOM and wiring included.
-2. **Print the V4 enclosure** for the development board path: three parts, STL and 3MF, on [Printables](https://www.printables.com/model/1839324) or [on GitHub](https://github.com/The-Open-Music-Box/enclosure).
+2. **Print the V4 enclosure** for the development board path: four parts, on [Printables](https://www.printables.com/model/1839324) or [on GitHub](https://github.com/The-Open-Music-Box/enclosure).
 3. **Flash the firmware straight from your browser**, nothing to install: [theopenmusicbox.com/en/build/flash](https://theopenmusicbox.com/en/build/flash/).
 4. **Install the app**, add your music and stories, link them to cards.
 
@@ -114,7 +114,7 @@ Under the hood, everything is contract-driven: one API specification (OpenAPI an
 
 ### What is public here
 
-**[enclosure](https://github.com/The-Open-Music-Box/enclosure)**<br/>The 3D-printable enclosure of the Prototype V4: body, top and card holder, as STL and 3MF, under CERN-OHL-S v2. Print it, change it, sell what you build, as long as your own files stay open under the same licence.
+**[enclosure](https://github.com/The-Open-Music-Box/enclosure)**<br/>The 3D-printable enclosure of the Prototype V4: body, top, card holder and rotary cap, under CERN-OHL-S v2. STL and 3MF for the first three, 3MF only for the cap. Print it, change it, sell what you build, as long as your own files stay open under the same licence.
 
 **[raspberrypi-firmware](https://github.com/The-Open-Music-Box/raspberrypi-firmware)**<br/>The Raspberry Pi proof of concept that started all this, kept as it was.
 
