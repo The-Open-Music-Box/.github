@@ -125,6 +125,10 @@ The product repositories (ESP32 firmware, mobile app, backend) are private. Why,
   <strong>Jonathan Piette</strong>, creator and maintainer &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/jonathan-piette-110aa33bb/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/jonathanpiette">GitHub</a>
 </p>
 
+<p align="center">
+  <a href="https://www.buymeacoffee.com/rhy6j5cdpq9" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="136" /></a>
+</p>
+
 <br/>
 
 ### Source and licensing
@@ -133,7 +137,7 @@ The original **Raspberry Pi proof of concept** is source available and free to u
 
 The **enclosure of the Prototype V4** is released under **[CERN-OHL-S v2](https://github.com/The-Open-Music-Box/enclosure)**, a strongly reciprocal open hardware licence. You may print it, modify it, share it and sell hardware based on it, as long as your modified design files stay open under the same licence, with attribution and a link to your source.
 
-The **current product** (ESP32 firmware, mobile app, backend) is **not open source** and its source is **not public** at this time. The "Open" in the name is a promise about lock-in, not about code: your content stays yours, the hardware is repairable, and nothing depends on us to keep working.
+The **current product** (ESP32 firmware, mobile app, backend) is **not open source** and its source is **not public** at this time. The "Open" in the name is a promise about lock-in, not about code: your content stays yours, the hardware is repairable, and the box keeps playing what it holds with no cloud in the loop.
 
 We are not taking external code contributions for now. The best way to help: build one, share your feedback on Discord, and tell the parents around you.
 
@@ -141,8 +145,4 @@ We are not taking external code contributions for now. The best way to help: bui
 
 <p align="center">
   Special thanks to <a href="https://monatelierweb.com">Mon Atelier Web</a> for the web development and 3D modeling of the prototype.
-</p>
-
-<p align="center">
-  <a href="https://www.buymeacoffee.com/rhy6j5cdpq9" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="136" /></a>
 </p>
