@@ -1,5 +1,8 @@
 <p align="center">
+  <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-hero-dark.png" />
   <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-hero.png" alt="The Open Music Box, screen-free audio player for kids" width="100%" />
+</picture>
 </p>
 
 <p align="center">
@@ -14,11 +17,20 @@
   <a href="https://testflight.apple.com/join/5vC2Dfzg"><img src="https://img.shields.io/badge/iOS%20app-open%20beta-264C6E?style=flat-square&labelColor=F8C9B9" alt="iOS app open beta" /></a>
   <img src="https://img.shields.io/badge/Android%20app-closed%20beta-264C6E?style=flat-square&labelColor=E8DFC9" alt="Android app closed beta" />
   <a href="https://github.com/The-Open-Music-Box/enclosure"><img src="https://img.shields.io/badge/Enclosure-CERN--OHL--S%20v2-264C6E?style=flat-square&labelColor=FDF8EF" alt="Enclosure under CERN-OHL-S v2" /></a>
+  <a href="https://www.instagram.com/theopenmusicbox/"><img src="https://img.shields.io/badge/Instagram-%40theopenmusicbox-264C6E?style=flat-square&labelColor=C7DEC9" alt="Instagram" /></a>
+  <a href="https://www.facebook.com/theopenmusicbox"><img src="https://img.shields.io/badge/Facebook-theopenmusicbox-264C6E?style=flat-square&labelColor=FFE8B0" alt="Facebook" /></a>
+  <a href="https://bsky.app/profile/theopenmusicbox.bsky.social"><img src="https://img.shields.io/badge/Bluesky-%40theopenmusicbox-264C6E?style=flat-square&labelColor=F8C9B9" alt="Bluesky" /></a>
+  <a href="https://www.printables.com/model/1839324"><img src="https://img.shields.io/badge/Printables-Prototype%20V4%20enclosure-264C6E?style=flat-square&labelColor=E8DFC9" alt="Printables" /></a>
+  <a href="https://links.theopenmusicbox.com"><img src="https://img.shields.io/badge/All%20links-links.theopenmusicbox.com-264C6E?style=flat-square&labelColor=FDF8EF" alt="All links" /></a>
+  <a href="mailto:contact@theopenmusicbox.com"><img src="https://img.shields.io/badge/Email-contact%40theopenmusicbox.com-264C6E?style=flat-square&labelColor=C7DEC9" alt="Email" /></a>
 </p>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-story.png" alt="The story" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-story-dark.png" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-story.png" alt="The story" width="800" />
+</picture>
 
 I wanted to share my passion with my kids: music and video games.
 
@@ -28,7 +40,10 @@ That was the proof of concept. Today The Open Music Box is a real product in the
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-how.png" alt="How it works" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-how-dark.png" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-how.png" alt="How it works" width="800" />
+</picture>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/musicbox-v4-render.jpg" alt="The MusicBox V4 prototype with a card in its slot" width="420" />
@@ -42,7 +57,10 @@ That was the proof of concept. Today The Open Music Box is a real product in the
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises.png" alt="The promise: what you put in stays yours" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises-dark.png" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises.png" alt="The promise: what you put in stays yours" width="800" />
+</picture>
 
 Connected things for children raise a simple question: who owns what you bought? The MusicBox is designed so the answer is you.
 
@@ -58,7 +76,10 @@ Connected things for children raise a simple question: who owns what you bought?
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-build.png" alt="Build your own MusicBox" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-build-dark.png" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-build.png" alt="Build your own MusicBox" width="800" />
+</picture>
 
 Handy with tools? The assembly guide, the parts list and the software are on the website, and the community helps out on Discord.
 
@@ -75,7 +96,10 @@ Handy with tools? The assembly guide, the parts list and the software are on the
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-status.png" alt="Where we are" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-status-dark.png" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-status.png" alt="Where we are" width="800" />
+</picture>
 
 - **Raspberry Pi proof of concept**: validated, [source available](https://github.com/The-Open-Music-Box/raspberrypi-firmware) (archived)
 - **ESP32 firmware**: beta, installable from the browser
@@ -100,34 +124,7 @@ The product repositories (ESP32 firmware, mobile app, backend) are private. Why,
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-follow.png" alt="Follow the project" width="100%" />
 
-<p align="center">
-  <a href="https://theopenmusicbox.com"><img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-website.png" width="64" alt="Website" title="Website" /></a>
-  <a href="https://discord.gg/5sUnQ553Af"><img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-discord.png" width="64" alt="Discord" title="Discord" /></a>
-  <a href="https://www.instagram.com/theopenmusicbox/"><img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-instagram.png" width="64" alt="Instagram" title="Instagram" /></a>
-  <a href="https://www.facebook.com/theopenmusicbox"><img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-facebook.png" width="64" alt="Facebook" title="Facebook" /></a>
-  <a href="https://bsky.app/profile/theopenmusicbox.bsky.social"><img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-bluesky.png" width="64" alt="Bluesky" title="Bluesky" /></a>
-  <a href="https://www.printables.com/model/1839324"><img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-printables.png" width="64" alt="Printables" title="Printables" /></a>
-  <a href="https://links.theopenmusicbox.com"><img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-links.png" width="64" alt="All links" title="All links" /></a>
-  <a href="mailto:contact@theopenmusicbox.com"><img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/rd-mail.png" width="64" alt="Email" title="Email" /></a>
-</p>
-
-<p align="center">
-  Website &nbsp;·&nbsp; Discord &nbsp;·&nbsp; Instagram &nbsp;·&nbsp; Facebook &nbsp;·&nbsp; Bluesky &nbsp;·&nbsp; Printables &nbsp;·&nbsp; All links &nbsp;·&nbsp; Email
-</p>
-
-<p align="center">
-  Newsletter: <a href="https://theopenmusicbox.com">theopenmusicbox.com</a> &nbsp;·&nbsp; Contact: <a href="mailto:contact@theopenmusicbox.com">contact@theopenmusicbox.com</a>
-</p>
-
-<p align="center">
-  <strong>Jonathan Piette</strong>, creator and maintainer &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/jonathan-piette-110aa33bb/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/jonathanpiette">GitHub</a>
-</p>
-
-<p align="center">
-  <a href="https://www.buymeacoffee.com/rhy6j5cdpq9" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="136" /></a>
-</p>
 
 <br/>
 
@@ -145,4 +142,16 @@ We are not taking external code contributions for now. The best way to help: bui
 
 <p align="center">
   Special thanks to <a href="https://monatelierweb.com">Mon Atelier Web</a> for the web development and 3D modeling of the prototype.
+</p>
+
+<p align="center">
+  Newsletter: <a href="https://theopenmusicbox.com">theopenmusicbox.com</a> &nbsp;·&nbsp; Contact: <a href="mailto:contact@theopenmusicbox.com">contact@theopenmusicbox.com</a>
+</p>
+
+<p align="center">
+  <strong>Jonathan Piette</strong>, creator and maintainer &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/jonathan-piette-110aa33bb/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/jonathanpiette">GitHub</a>
+</p>
+
+<p align="center">
+  <a href="https://www.buymeacoffee.com/rhy6j5cdpq9" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="136" /></a>
 </p>
