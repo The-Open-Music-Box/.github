@@ -34,27 +34,27 @@ That was the proof of concept. Today The Open Music Box is a real product in the
   <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/musicbox-v4-render.jpg" alt="The MusicBox V4 prototype with a card in its slot" width="420" />
 </p>
 
-**What you do from your phone** — You add your music, your stories and your podcasts, you create playlists and you link each one to an NFC card. Standard cards, stickers or figurines, nothing proprietary.
+**What you do from your phone**<br/>You add your music, your stories and your podcasts, you create playlists and you link each one to an NFC card. Standard cards, stickers or figurines, nothing proprietary.
 
-**What your child does** — Place the card on the MusicBox and it plays. Take it off and it stops. Four buttons for volume and tracks, nothing else to learn, and no need to know how to read.
+**What your child does**<br/>Place the card on the MusicBox and it plays. Take it off and it stops. Four buttons for volume and tracks, nothing else to learn, and no need to know how to read.
 
-**Where it works** — In the bedroom, in the car, at the grandparents. The MusicBox plays its content on its own, with no server to reach and no account to revalidate.
+**Where it works**<br/>In the bedroom, in the car, at the grandparents. The MusicBox plays its content on its own, with no server to reach and no account to revalidate.
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises.png" alt="What you get" width="100%" />
+<img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises.png" alt="The promise: what you put in stays yours" width="100%" />
 
 Connected things for children raise a simple question: who owns what you bought? The MusicBox is designed so the answer is you.
 
-**Your music, your stories** — You put in whatever you want, and it stays yours. No house catalogue, nothing that vanishes the day a catalogue shuts down.
+**Your music, your stories**<br/>You put in whatever you want, and it stays yours. No house catalogue, nothing that vanishes the day a catalogue shuts down.
 
-**Works without internet** — No cloud in the loop. The day the project stops, the MusicBox keeps playing.
+**Works without internet**<br/>No cloud in the loop. The day the project stops, the MusicBox keeps playing.
 
-**Repairable by design** — Standard parts, chosen so they can be swapped. Nothing glued shut for good.
+**Repairable by design**<br/>Standard parts, chosen so they can be swapped. Nothing glued shut for good.
 
-**No account, no ads** — Nothing to sign up for, nothing watching your child.
+**No account, no ads**<br/>Nothing to sign up for, nothing watching your child.
 
-**No screen, and that is the point** — No scrolling, no video queueing itself up, no notification. Your child listens and imagines.
+**No screen, and that is the point**<br/>No scrolling, no video queueing itself up, no notification. Your child listens and imagines.
 
 <br/>
 
@@ -62,11 +62,11 @@ Connected things for children raise a simple question: who owns what you bought?
 
 Handy with tools? The assembly guide, the parts list and the software are on the website, and the community helps out on Discord.
 
-**Breadboard** *(available)* — Off-the-shelf parts, a breadboard, Dupont wires and an enclosure of your own.
+**Breadboard** *(available)*<br/>Off-the-shelf parts, a breadboard, Dupont wires and an enclosure of your own.
 
-**Development board** *(available)* — An all-in-one HermitX board with the NFC antenna, a 3 W speaker and an NTAG215 card, a soldering iron and a 3D printer.
+**Development board** *(available)*<br/>An all-in-one HermitX board with the NFC antenna, a 3 W speaker and an NTAG215 card, a soldering iron and a 3D printer.
 
-**The Open Music Box player** *(coming)* — Our own board, with audio jack and battery management. Nothing to solder or print.
+**The Open Music Box player** *(coming)*<br/>Our own board, with audio jack and battery management. Nothing to solder or print.
 
 1. **Assemble the hardware** following the [build guide](https://theopenmusicbox.com/en/build/), BOM and wiring included.
 2. **Print the V4 enclosure** for the development board path: three parts, STL and 3MF, on [Printables](https://www.printables.com/model/1839324) or [on GitHub](https://github.com/The-Open-Music-Box/enclosure).
@@ -77,12 +77,12 @@ Handy with tools? The assembly guide, the parts list and the software are on the
 
 <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-status.png" alt="Where we are" width="100%" />
 
-- **Raspberry Pi proof of concept** — validated, [source available](https://github.com/The-Open-Music-Box/raspberrypi-firmware) (archived)
-- **ESP32 firmware** — beta, installable from the browser
-- **iOS app** — open beta on [TestFlight](https://testflight.apple.com/join/5vC2Dfzg)
-- **Android app** — closed beta, [become a tester](mailto:contact@theopenmusicbox.com?subject=I%20want%20to%20test%20the%20Android%20beta)
-- **Development board path** — available, 3D enclosure V4 published
-- **The Open Music Box player board** — in design
+- **Raspberry Pi proof of concept**: validated, [source available](https://github.com/The-Open-Music-Box/raspberrypi-firmware) (archived)
+- **ESP32 firmware**: beta, installable from the browser
+- **iOS app**: open beta on [TestFlight](https://testflight.apple.com/join/5vC2Dfzg)
+- **Android app**: closed beta, [become a tester](mailto:contact@theopenmusicbox.com?subject=I%20want%20to%20test%20the%20Android%20beta)
+- **Development board path**: available, 3D enclosure V4 published
+- **The Open Music Box player board**: in design
 
 Under the hood, everything is contract-driven: one API specification (OpenAPI and Socket.IO) is the source of truth shared by the ESP32 firmware (C++, hexagonal architecture), the Flutter app (Dart, Riverpod) and the backend (Rust).
 
@@ -90,11 +90,11 @@ Under the hood, everything is contract-driven: one API specification (OpenAPI an
 
 ### What is public here
 
-**[enclosure](https://github.com/The-Open-Music-Box/enclosure)** — The 3D-printable enclosure of the Prototype V4: body, top and card holder, as STL and 3MF, under CERN-OHL-S v2. Print it, change it, sell what you build, as long as your own files stay open under the same licence.
+**[enclosure](https://github.com/The-Open-Music-Box/enclosure)**<br/>The 3D-printable enclosure of the Prototype V4: body, top and card holder, as STL and 3MF, under CERN-OHL-S v2. Print it, change it, sell what you build, as long as your own files stay open under the same licence.
 
-**[raspberrypi-firmware](https://github.com/The-Open-Music-Box/raspberrypi-firmware)** — The Raspberry Pi proof of concept that started all this, kept as it was.
+**[raspberrypi-firmware](https://github.com/The-Open-Music-Box/raspberrypi-firmware)**<br/>The Raspberry Pi proof of concept that started all this, kept as it was.
 
-**[update-provider](https://github.com/The-Open-Music-Box/update-provider)** — The endpoint the app asks for firmware updates. Public so that anyone can see what the box fetches, and from where.
+**[update-provider](https://github.com/The-Open-Music-Box/update-provider)**<br/>The endpoint the app asks for firmware updates. Public so that anyone can see what the box fetches, and from where.
 
 The product repositories (ESP32 firmware, mobile app, backend) are private. Why, and what that does and does not mean for you, is set out under [Source and licensing](#source-and-licensing) below.
 
