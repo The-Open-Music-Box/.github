@@ -29,7 +29,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-story-dark.png" />
-  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-story.png" alt="The story" width="100%" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-story.png" alt="The story" width="800" />
 </picture>
 
 I wanted to share my passion with my kids: music and video games.
@@ -42,7 +42,7 @@ That was the proof of concept. Today The Open Music Box is a real product in the
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-how-dark.png" />
-  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-how.png" alt="How it works" width="100%" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-how.png" alt="How it works" width="800" />
 </picture>
 
 <p align="center">
@@ -59,7 +59,7 @@ That was the proof of concept. Today The Open Music Box is a real product in the
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises-dark.png" />
-  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises.png" alt="The promise: what you put in stays yours" width="100%" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-promises.png" alt="The promise: what you put in stays yours" width="800" />
 </picture>
 
 Connected things for children raise a simple question: who owns what you bought? The MusicBox is designed so the answer is you.
@@ -78,7 +78,7 @@ Connected things for children raise a simple question: who owns what you bought?
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-build-dark.png" />
-  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-build.png" alt="Build your own MusicBox" width="100%" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-build.png" alt="Build your own MusicBox" width="800" />
 </picture>
 
 Handy with tools? The assembly guide, the parts list and the software are on the website, and the community helps out on Discord.
@@ -98,7 +98,7 @@ Handy with tools? The assembly guide, the parts list and the software are on the
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-status-dark.png" />
-  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-status.png" alt="Where we are" width="100%" />
+  <img src="https://raw.githubusercontent.com/The-Open-Music-Box/.github/main/profile/assets/readme-status.png" alt="Where we are" width="800" />
 </picture>
 
 - **Raspberry Pi proof of concept**: validated, [source available](https://github.com/The-Open-Music-Box/raspberrypi-firmware) (archived)
